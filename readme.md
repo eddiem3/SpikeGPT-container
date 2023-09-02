@@ -1,15 +1,24 @@
-#Install nvidia drivers
+# Overview
+This repo is a docker container for running [SpikeGPT](https://github.com/ridgerchu/SpikeGPT/) with an Nvidia GPU. It's base is the Nvida PyTorch container which runs Ubuntu.
 
-#Install Nvidia Container Toolkit for GPU Use wtih Docker
+# Prerequisites
+
+
+## Install Nvidia Container Toolkit for GPU Use wtih Docker
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 
-#Test the installation
+Note: Installing the Nvidia Container Toolkit does not install the appropriate Nvidia drivers on your host machine for you. Be sure you can run nvidia-smi on the host machine with no errors.
+
+### Test the installation
 sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
 
-#You should see...
+Your output should be similar to the following...
+
+
+```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 450.51.06    Driver Version: 450.51.06    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+
@@ -29,9 +38,8 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
+```
 
 
-
-
-conda init bash
-source /root/.bashrc
+# Running SpikeGPT
+python run.py
