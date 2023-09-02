@@ -47,7 +47,7 @@ Your output should be similar to the following...
 ```
 
 
-# Running SpikeGPT
+# Running SpikeGPT Container
 
 ## Copy the SpikeGPT directory
 
