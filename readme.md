@@ -42,4 +42,25 @@ Your output should be similar to the following...
 
 
 # Running SpikeGPT
+
+## Copy the SpikeGPT directory, including the approporate model weights as described in the project README into the SpikeGPT-container directory
+
+```
+cd SpikeGPT-container
+
+cp -R  https://github.com/ridgerchu/SpikeGPT.git .
+```
+
+## Build and run the container
+
+```
+docker build -t spikegpt .
+
+./run.bash
+```
+
+Once in the container simply launch the run script
+
+```
 python run.py
+```
