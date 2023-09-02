@@ -5,15 +5,21 @@ This repo is a docker container for running [SpikeGPT](https://github.com/ridger
 
 
 ## Install Nvidia Container Toolkit for GPU Use wtih Docker
+
+```
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
+```
 
 Note: Installing the Nvidia Container Toolkit does not install the appropriate Nvidia drivers on your host machine for you. Be sure you can run nvidia-smi on the host machine with no errors.
 
 ### Test the installation
+
+```
 sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
+```
 
 Your output should be similar to the following...
 
@@ -43,7 +49,9 @@ Your output should be similar to the following...
 
 # Running SpikeGPT
 
-## Copy the SpikeGPT directory, including the approporate model weights as described in the project README into the SpikeGPT-container directory
+## Copy the SpikeGPT directory
+
+Be sure to include the approporate model weights as described in the SpikeGPT project [README](https://github.com/ridgerchu/SpikeGPT) and copy the folder into the SpikeGPT-container directory
 
 ```
 cd SpikeGPT-container
