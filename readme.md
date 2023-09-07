@@ -56,7 +56,7 @@ Be sure to include the approporate model weights as described in the SpikeGPT pr
 ```
 cd SpikeGPT-container
 
-cp -R  https://github.com/ridgerchu/SpikeGPT.git .
+cp -R SpikeGPT.git .
 ```
 
 ## Build and run the container
