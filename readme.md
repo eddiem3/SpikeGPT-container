@@ -1,5 +1,5 @@
 # Overview
-This repo is a docker container for running [SpikeGPT](https://github.com/ridgerchu/SpikeGPT/) with an Nvidia GPU. It's base is the Nvida PyTorch container which runs Ubuntu.
+This repo is a docker container for running [SpikeGPT](https://github.com/ridgerchu/SpikeGPT/) by [ridgerchu](https://github.com/ridgerchu) with an Nvidia GPU. It's base is the Nvida PyTorch container which runs Ubuntu.
 
 # Prerequisites
 
